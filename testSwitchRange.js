@@ -4,7 +4,7 @@ var mathTestScores = [90, 72, 88, 64, 92];
 
 for (let i = 0; i < mathTestScores.length; i++) {
     console.log(mathTestScores[i]);
-    switch (mathTestScores[i]) {
+    switch (true) {
             case (mathTestScores[i] >= 90) :
                 console.log('You got an A with a score of ' + mathTestScores[i] + '.');
                 break;
