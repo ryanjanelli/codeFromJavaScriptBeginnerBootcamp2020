@@ -1,0 +1,1 @@
+Welcome to my page. I am learning JavaScript, am using GitHub to stay organized as well as manage version control of my files. 
