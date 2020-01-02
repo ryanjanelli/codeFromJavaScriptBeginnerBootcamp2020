@@ -8,7 +8,7 @@ var dmsShout = digitalMediaServicesMembers.map(function(names) {
 
 // puts the whole team together with commas
 var greetAll = dmsShout.reduce(function(a,b) {
-    if (b != dmsShout[dmsShout.length - 1]) {
+    if (b != a[a.length - 1]) {
         return a + ', ' + b; }
     else { return a + ', and ' + b; }
 })
