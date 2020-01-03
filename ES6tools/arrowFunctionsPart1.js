@@ -10,13 +10,13 @@ let cubed;
 // parenths () are optional around x when using a single parameter
 // no need for keywrod 'return' after fat arrow
 // concise body, x is implicitly returned
-cubed = x => x*x*x;
+cubed = x => x * x * x;
 // if curly braces are used, 'return' keyword is required
 // block body, x is explicitly returned
-cubed = x => {return x*x*x;};
+cubed = x => {return x * x * x;};
 
 // CONSIDERED BEST PRACTICE to include parenths for uniformity
-cubed = (x) => x*x*x;
+cubed = (x) => x * x * x;
 
 let add;
 // two or more parameters
