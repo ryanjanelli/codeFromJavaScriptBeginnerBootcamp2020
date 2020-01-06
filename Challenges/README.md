@@ -1,0 +1,1 @@
+My collection of open ended challenges and how I tackled them.
