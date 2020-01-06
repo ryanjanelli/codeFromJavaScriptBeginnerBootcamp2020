@@ -6,20 +6,16 @@ var colorArray = [
 
 // using a for loop, print each color
 
-var displayColors1 = function(array) {
-    for (i = 0; i < array.length; i++) {
-        console.log(`i value: ${i} | Color Name: ${array[i].color}`);
-    }
-};
 
-displayColors1(colorArray);
+for (i = 0; i < colorArray.length; i++) {
+    console.log(`i value: ${i} | Color Name: ${colorArray[i].color}`);
+}
+
 
 // using the forEach method, print each color
 
-var displayColors2  = function(array) {
-    array.forEach(function(item, index) {
-        console.log(`i value: ${index} | Color Name: ${item.color}`)
-    })
-}
 
-displayColors2(colorArray);
+colorArray.forEach(function(item, index) {
+    console.log(`i value: ${index} | Color Name: ${item.color}`)
+ })
+
