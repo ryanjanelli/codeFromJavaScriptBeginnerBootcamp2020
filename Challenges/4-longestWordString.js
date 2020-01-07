@@ -2,8 +2,8 @@
 
 // enter a str as a parameter
 longestWordLength = (str) => {
-    // set longestWord to a string with one character
-    let longestWord = ['a'];
+    // set longestWord to an array with one item, an empty string
+    let longestWord = [''];
     // take the str and convert each word to an array
     let array = str.split(' ');
     array.forEach((word) => {
