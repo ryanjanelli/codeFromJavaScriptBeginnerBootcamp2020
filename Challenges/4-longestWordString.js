@@ -20,7 +20,7 @@ longestWordLength = (str) => {
                 longestWord.push(word);
                 break;
             // if word is shorter than longest word, do nothing
-            case word.length < longestWord[0].length :
+            default :
                 break;
         }
     })
