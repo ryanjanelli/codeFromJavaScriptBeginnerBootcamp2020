@@ -11,7 +11,7 @@ findLargestNumber = (array) => Math.max(...array);
 // function that takes an array of numbers as an argument
 findLargestNumber2 = (array) => {
     // sets largestNumber to first number in array
-    let largestNumber = array.shift();
+    let largestNumber = array[0];
     for (let number of array) {
         // updates largestNumber if current number is larger
         if (number > largestNumber) {
@@ -31,7 +31,7 @@ findSmallestNumber = (array) => Math.min(...array);
 
 findSmallestNumber2 = (array) => {
     // sets smallestNumber to first number in array
-    let smallestNumber = array.shift();
+    let smallestNumber = array[0];
     array.filter((number) => {
        // updates smallestNumber is current number is smaller
         if (number < smallestNumber) {
