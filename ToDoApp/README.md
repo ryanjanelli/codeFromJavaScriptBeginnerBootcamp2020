@@ -1,1 +1,1 @@
-Creating a ToDo application
+Creating a ToDo List application
