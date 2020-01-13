@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDoTracker</title>
+    <style>
+        body {
+            padding : 15px;
+            background-color: #66CCFF;
+            font-family: sans-serif;
+        }
+        #title {
+            padding: 10px;
+            font-size: 36px;
+            border: 5px solid #FFF;
+            width: 240px;
+        }
+        #todo-header {
+            font-size: 24px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0px;
+            width: 240px;
+        }
+        li {
+            color: #333;
+            background-color: rgba(255, 255, 255, .5);
+            padding: 10px;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">ToDo Tracker</h1>
+
+    <form>
+        <input type="text" id="user-todo" placeholder="New Todo" required>
+    </form>
+
+    <h2 id="todo-header">Todos</h2>
+    <ul>
+
+    </ul>
+    
+<button id="clear">Clear All</button>
+
+<script>
+ // Step 1 -> create variables `form`, `todosList`, `button`, `input`
+    // to target the form, unordered list, button and input.
+    var form = document.querySelector('form');
+    var todoList = document.querySelector('ul');
+    var buttonClear = document.querySelector('button');
+    var input = document.getElementById('user-todo');
+
+    // create an todosArray to be used to set and get information from localStorage
+    // either todosArray grabs what is in the localStorage and sets todosArray to that or sets todosArray to an empty array
+    var todosArray = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
+    // localStorage item is set with a tag of 'todos' and the content of todosArray after stringify
+    localStorage.setItem('todos', JSON.stringify(todosArray));
+    // sets local variable storage to the item 'todos' in localStorage
+    var storage = JSON.parse(localStorage.getItem('todos'));
+
+    // Step 2 -> attach an event listener to the `form` variable with `addEventListener`
+    // to capture the user input on the `submit` event.
+    // Make sure to run `preventDefault()` on the event when the form is submitted.
+    // Call a `todoMaker` function which we will create in step three and pass to it
+    // the `input` variable and target the value the user has provide with `input.value`.
+    // Finally, set the `input.value` to an empty string.
+    form.addEventListener('submit', (e) => {
+        // prevent page refresh on submit
+        e.preventDefault();
+        // add input.value to end of the todosArray
+        todosArray.push(input.value);
+        // update localStorage with the todosArray via stringify() method
+        localStorage.setItem('todos', JSON.stringify(todosArray));
+        todoMaker(input.value);
+        // reset input.value to an empty string
+        input.value = '';
+    });
+
+
+
+    // Step 3 -> create a todoMaker function that creates 'li' elements with the text user provides
+    // from their form and appends it to the 'ul'.
+    var todoMaker = (newTodo) => {
+        let todo = document.createElement('li');
+        todo.className = 'todo'
+        todo.textContent = newTodo;
+        todoList.appendChild(todo);
+    }
+
+    // Loop through localStorage when a user first opens a page and run the todoMaker function
+    for (let i=0; i < storage.length; i++) {
+        todoMaker(storage[i])
+    }
+
+    // Step 4 -> attach an event listener to the `clear all` button listening for
+    // a user click.
+    // In the function use a while loop checking to see whether there
+    // is an li element as a child of the `ul` tag. In the code block use the
+    // removeChild() DOM method to removed that `li` using the firstChild property.
+    buttonClear.addEventListener('click', () => {
+        // clear the localStorage with the clear() method
+        localStorage.clear();
+        // while todoList has items in it, remove said items
+        while (todoList.firstChild) {
+            todoList.removeChild(todoList.firstChild)
+        }
+    })
+
+</script>
+
+</body>
+</html>
