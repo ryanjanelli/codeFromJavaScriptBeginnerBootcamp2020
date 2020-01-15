@@ -1,0 +1,1 @@
+A Donald Trump quote machine using HTML, CSS, JS, ajax requests and API interaction.
