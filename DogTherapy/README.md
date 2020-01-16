@@ -1,0 +1,1 @@
+Use AJAX requests to pull random dog images using the fetch() method.
