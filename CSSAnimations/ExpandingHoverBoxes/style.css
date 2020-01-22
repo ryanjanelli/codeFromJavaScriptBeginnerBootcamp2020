@@ -1,0 +1,42 @@
+#container {
+    height: 100%;
+    width: 800px;
+    background-color: #999999;
+    margin: 60px;
+    display: grid;
+    align-items: center;
+    justify-content: left; 
+}
+
+.box {
+    height: 120px;
+    width: 120px;
+    background-color: red;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform-origin: left;
+}
+
+.box:hover {
+    transform: scaleX(4);
+}
+
+.b1 {
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.b2 {
+    transition: transform 2s ease-in-out;
+}
+
+.b3 {
+    transition: transform 2s ease-in;
+}
+
+.b4 {
+    transition: transform 2s ease-out;
+}
