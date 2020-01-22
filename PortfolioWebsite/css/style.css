@@ -127,6 +127,7 @@ footer img {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .section-header h2 {
@@ -165,6 +166,10 @@ footer img {
     letter-spacing: 2px;
 }
 
+.service-box p {
+    text-align: justify;
+}
+
 /* ABOUT ME */
 
 .about {
@@ -186,6 +191,10 @@ footer img {
     padding: 15px;
     border-radius: 4px;
     margin-bottom: 15px;
+}
+
+.testimonial-content {
+    text-align: justify;
 }
 
 /* .testimonial-author {
