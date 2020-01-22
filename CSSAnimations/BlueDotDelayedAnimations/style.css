@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px;
+    animation: enterTitle 1s 1 ease-in-out;
+}
+
+@keyframes enterTitle {
+    0% {transform: translateY(-200%)}
+    100% {transform: translateY(0%)}
+}
+
+#blue-dot {
+    height: 250px;
+    width: 250px;
+    background-color: royalblue;
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    animation: flicker 2s infinite alternate ease-in-out 2s;
+}
+
+@keyframes flicker {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+.paragraph-text {
+    margin-top: 40%;
+    /* animation: hideParagraph 1s 5s forwards; */
+    animation-name: hideParagraph;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideParagraph {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(200px);}
+}
