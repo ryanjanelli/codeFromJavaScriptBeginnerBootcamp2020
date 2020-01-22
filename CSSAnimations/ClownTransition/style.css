@@ -1,0 +1,22 @@
+#container {
+    width: 100%;
+    height: 250px;
+    background-color: #9ad3de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clown:hover {
+    transform: scale3d(1.2, 1.2, 1) rotate(45deg);
+}
+
+#clown {
+    transition-property: transform;
+    transition-duration: .1s;
+}
+
+/* THIS IS THE SHORTHAND
+#clown {
+    transition: transform .1s;
+} */
