@@ -1,7 +1,7 @@
 // declare variable 'now' and set to current time
 const now = moment();
 // declare variable 'christmas' and set it to december 25th
-let christmas = moment("Dec 25", "MMM DD");
+let christmas = moment("12 25", "MM DD");
 // create a conditional to check if 'christmas' is before 'now' by passing in 'now' and 'days' as parameters into the 'isBefore()' method
 if (christmas.isBefore(now, 'days')) {
     // if 'christmas' is before the current date then add a year to the value of christmas
